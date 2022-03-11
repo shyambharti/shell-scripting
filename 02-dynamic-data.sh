@@ -2,6 +2,6 @@
 a=10
 b=20
 
-ADD=$((a + b))
+ADD=$(($a + $b))
 
 echo "sum $ADD"
