@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "\e[31m Hello First Scripting\e[0m"
+echo -e "\e[32m Hello First Scripting\e[0m"
