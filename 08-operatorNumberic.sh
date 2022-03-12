@@ -12,7 +12,7 @@ echo "End"
 
 read -p "enter the String value for ==" file1
 read -p "enter the String value for ==" file2
-if [ -f $file1 -ef $file2 ]
+if [ -f "$file1" ]
 then
   echo "ok"
   else
