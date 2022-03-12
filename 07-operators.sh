@@ -14,3 +14,11 @@ then
   else
     echo "not ok"
 fi
+
+read -p "enter the String value for ==" x
+if [ "$x" == "abc" ]
+then
+  echo "ok"
+  else
+    echo "not ok"
+fi
