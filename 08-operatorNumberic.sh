@@ -7,3 +7,5 @@ then
   else
     echo "not ok"
 fi
+
+echo "End"
