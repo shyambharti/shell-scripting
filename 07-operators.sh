@@ -39,7 +39,8 @@ then
     echo "not ok"
 fi
 
-read -p "enter the String value for ==" p q
+read -p "enter the String value for ==" p
+read -p "enter the String value for ==" q
 if [ "$p" == "abc" || "$q" == "pqr" ]
 then
   echo "ok"
