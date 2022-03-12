@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "enter the String value for ==" z
 read -p "enter the String value for ==" y
-if [ $z=2 || $y=3 ]
+if [ $z = 2 || $y = 3 ]
 then
   echo "ok"
   else
