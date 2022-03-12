@@ -1,2 +1,2 @@
-frondend:
-	bash component/frondend.sh
+frontend:
+	bash component/frontend.sh
