@@ -38,3 +38,11 @@ then
   else
     echo "not ok"
 fi
+
+read -p "enter the String value for ==" p q
+if [ "$p" == "abc" || "$q" == "pqr" ]
+then
+  echo "ok"
+  else
+    echo "not ok"
+fi
