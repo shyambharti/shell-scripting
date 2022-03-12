@@ -22,3 +22,11 @@ then
   else
     echo "not ok"
 fi
+
+read -p "enter the String value for ==" z
+if [ -z "$z" ]
+then
+  echo "ok"
+  else
+    echo "not ok"
+fi
