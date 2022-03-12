@@ -7,7 +7,7 @@ else
   echo "false condition"
 fi
 
-echo -p "Enter the String for compair" e
+read -p "Enter the String for compair" e
 if [ "$e" = "abc" ]
 then
   echo "Ok"
