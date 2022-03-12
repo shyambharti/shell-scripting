@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if[ "abc" = "ABC" ];
+if [ "abc" = "ABC" ]
 then
  echo "true condition"
-then
+else
   echo "false condition"
 fi
