@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\e[32Install Nginx Webserver -START  \e[0m"
+echo -e "\e[32mInstall Nginx Webserver -START  \e[0m"
  yum install nginx -y
  if [ "$?" -eq 0 ]
    then
@@ -10,7 +10,7 @@ echo -e "\e[32Install Nginx Webserver -START  \e[0m"
      exit 1
   fi
 
-echo -e "\e[32Enable nginx Webserver -START  \e[0m"
+echo -e "\e[32mEnable nginx Webserver -START  \e[0m"
  systemctl enable nginx
 if [ "$?" -eq 0 ]
    then
@@ -20,7 +20,7 @@ if [ "$?" -eq 0 ]
      exit 2
   fi
 
-echo -e "\e[32Start nginx Webserver -START  \e[0m"
+echo -e "\e[32mStart nginx Webserver -START  \e[0m"
 systemctl start nginx
 if [ "$?" -eq 0 ]
     then
@@ -30,7 +30,7 @@ if [ "$?" -eq 0 ]
       exit 3
 fi
 
-echo -e "\e[32Start Downloading Frontend Application from git -START  \e[0m"
+echo -e "\e[32mStart Downloading Frontend Application from git -START  \e[0m"
  curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 if [ "$?" -eq 0 ]
     then
@@ -41,15 +41,15 @@ if [ "$?" -eq 0 ]
 fi
 
 
-echo -e "\e[32Deploy in Nginx Default Location. -START  \e[0m"
+echo -e "\e[32mDeploy in Nginx Default Location. -START  \e[0m"
  cd /usr/share/nginx/html
  rm -rf *
  unzip /tmp/frontend.zip
  if [ "$?" -eq 0 ]
   then
-    echo -e "\e[32m*Unzip frontend.zip Successfully.   \e[0m"
+    echo -e "\e[32mUnzip frontend.zip Successfully.   \e[0m"
   else
-    echo -e "\e[31m*Unzip frontend.zip NOT Successfully.  \e[0m"
+    echo -e "\e[31mUnzip frontend.zip NOT Successfully.  \e[0m"
     exit 5
  fi
  sudo mv frontend-main/* .
@@ -77,8 +77,8 @@ echo -e "\e[32mRestart nginx Server\e[0m"
 systemctl restart nginx
  if [ "$?" -eq 0 ]
   then
-    echo -e "\e[32m*Restart nginx Server -SUCCESSFUL   \e[0m"
+    echo -e "\e[32mRestart nginx Server -SUCCESSFUL   \e[0m"
   else
-    echo -e "\e[31m*Restart nginx Server -NOT SUCCESSFUL  \e[0m"
+    echo -e "\e[31mRestart nginx Server -NOT SUCCESSFUL  \e[0m"
     exit 7
  fi
