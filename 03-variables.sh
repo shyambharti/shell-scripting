@@ -6,7 +6,6 @@ b=devops
 echo ${a}times
 echo $b Training
 
-
 # {} are needed if variable is combined with other words with out spaces
 
 DATE=2022-03-10
