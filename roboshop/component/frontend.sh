@@ -20,19 +20,22 @@ StatCheck $?
 
 
 print "Deploy in Nginx Default Location. -START"
- cd /usr/share/nginx/html
- rm -rf *
- unzip /tmp/frontend.zip &>>$LOG_FILE
+ rm -rf /usr/share/nginx/html/*\
  StatCheck $?
+
+cd /usr/share/nginx/html/
 
  sudo mv frontend-main/* .
  StatCheck $?
 
-mv static/* .
-rm -rf frontend-main README.md
+print "unzip the package"
+unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* .
+StatCheck $?
+
+print "configuration of roboshop.config"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG_FILE
 StatCheck $?
 
 print "Restart nginx Server"
-systemctl restart nginx &>>$LOG_FILE
+systemctl restart nginx && systemctl enable nginx &>>$LOG_FILE
 StatCheck $?
