@@ -25,9 +25,6 @@ print "Deploy in Nginx Default Location. -START"
 
 cd /usr/share/nginx/html/
 
- sudo mv frontend-main/* .
- StatCheck $?
-
 print "unzip the package"
 unzip /tmp/frontend.zip && mv frontend-main/* . && mv static/* .
 StatCheck $?
