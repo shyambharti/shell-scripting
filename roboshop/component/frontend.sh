@@ -18,7 +18,6 @@ print "Start Downloading Frontend Application from git -START "
  curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
 StatCheck $?
 
-
 print "Deploy in Nginx Default Location. -START"
  rm -rf /usr/share/nginx/html/*\
  StatCheck $?
