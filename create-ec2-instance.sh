@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ $1 -eq 0 ]; then
+   instanceType=${1};
+    exit 1
+  fi
+
+
 security_id=$(aws ec2 describe-security-groups --filters Name=group-name,Values=allow-all | jq '.SecurityGroups[].GroupId' | sed -e 's/"/ /g')
 
 
