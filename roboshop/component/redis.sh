@@ -3,8 +3,9 @@
 source component/common.sh
 
 Print "bash setup for redis"
- curl -L https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo -o /etc/yum.repos.d/redis.repo  - &>>"${LOG_FILE}"
+ curl -s -o /etc/yum.repos.d/redis.repo "https://raw.githubusercontent.com/roboshop-devops-project/redis/main/redis.repo"   &>>"${LOG_FILE}"
 StatCheck $?
+
 
 Print "Installation redis"
  yum install redis -y   &>>"${LOG_FILE}"
