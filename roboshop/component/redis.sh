@@ -17,5 +17,5 @@ StatCheck $?
 
 
 Print "re-start redis"
-systemctl enable redis &>>"${LOG_FILE}" && ystemctl start redis &>>"${LOG_FILE}"
+systemctl enable redis &>>"${LOG_FILE}" && systemctl start redis &>>"${LOG_FILE}"
 StatCheck $?
