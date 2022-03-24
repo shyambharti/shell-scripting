@@ -11,7 +11,7 @@ Print "Install mongodb "
 StatCheck $?
 
 Print "conf change in mongod.conf "
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>>$LOG_FILE
+sed -i -e 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf &>>$LOG_FILE
 StatCheck $?
 
 Print "Enable mongodb "
