@@ -1,4 +1,5 @@
 #!/bin/bash
+
 source component/common.sh
 
 Print "bash setup for redis"
