@@ -8,3 +8,5 @@ redis:
 	bash component/redis.sh
 user:
 	bash component/user.sh
+cart:
+	bash component/cart.sh
