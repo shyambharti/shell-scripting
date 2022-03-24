@@ -5,6 +5,6 @@ mongodb:
 catalogue:
 	bash component/catalogue.sh
 redis:
-	bash component/redis.sh
+	bash component/redis1.sh
 user:
 	bash component/user.sh
