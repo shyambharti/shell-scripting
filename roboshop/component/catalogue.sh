@@ -16,7 +16,7 @@ if [ $? -ne 0 ]; then
   useradd ${APP_USER} &>>${LOG_FILE}
 fi
 
-Print "Installation nodes js"
+Print "extract catalogue"
  curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG_FILE
 StatCheck $?
 
@@ -24,11 +24,11 @@ Print "cleanup old content"
 rm -rf /home/${APP_USER}/cataloque &>>$LOG_FILE
 StatCheck $?
 
-Print "Installation nodes js"
+Print "unzip catalogue"
 cd /home/${APP_USER} &>>$LOG_FILE && unzip /tmp/catalogue.zip &>>$LOG_FILE &&  mv catalogue-main catalogue &>>$LOG_FILE
 StatCheck $?
 
-Print "Installation nodes js"
+Print "install npm"
 cd /home/roboshop/catalogue &>>$LOG_FILE && npm install &>>$LOG_FILE
 StatCheck $?
 
