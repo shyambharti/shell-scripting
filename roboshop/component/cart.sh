@@ -32,7 +32,7 @@ Print "install npm"
 cd /home/roboshop/cart &>>$LOG_FILE && npm install &>>$LOG_FILE
 StatCheck $?
 
-Print "app user permission"
+Print "app cart permission"
 chown -R ${APP_USER}:${APP_USER} /home/${APP_USER}
 StatCheck $?
 
