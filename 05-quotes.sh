@@ -4,3 +4,5 @@ echo 'Apples Cost is $100'
 echo "Apples Cost is $100"
 
 echo "Apples Cost is $100"
+
+echo "Apples Cost is $300"
